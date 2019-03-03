@@ -1,0 +1,36 @@
+@import "../../../styles/grid";
+
+.OurWorkSection {
+  .grid-items {
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .grid-item {
+      transition: transform 0.2s;
+      max-width: 100%;
+      width: 48%;
+      margin: 1%;
+
+      &:nth-child(1n+0) { float: left;}
+      &:nth-child(2n+2) { float: right;}
+
+      &:hover {
+        transform: translateY(-5px) scale(1.01);
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @media #{$small-and-down} {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import url('//fonts.googleapis.com/css?family=Poppins:400,600,800');
+@import url('//use.fontawesome.com/releases/v5.7.2/css/all.css');
+
+@import './styles/grid';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background-color: #1a1a1f;
+  overflow-x: hidden;
+}
+
+::-moz-selection { background: deepskyblue; }
+::selection { background: deepskyblue; }
+
+
+.App a {
+  color: #27aae0;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.page-container > .page-appear {
+  opacity: .0001;
+}
+.page-container > .page-enter-done {
+  opacity: .9999;
+  transition: opacity 0.2s;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

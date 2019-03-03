@@ -1,0 +1,23 @@
+.ContactSection {
+  .contact-items {
+    font-size: calc(10px + 3vmin);
+
+    .contact-item {
+      display: table;
+      margin-bottom: 15px;
+      color: white;
+      transition: color 0.2s;
+
+      > span {
+        display: table-cell;
+        &:nth-child(2) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    a.contact-item:hover {
+      color: #27aae0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{site.data.site.title}}</title>
+    <meta name="description" content="{{site.data.site.searchEngineDescription}}">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<script>
+    siteData = {
+    	contactInfo: {% include_relative _data/contactInfo.json %},
+        work: {% include_relative _data/work.json %},
+        people: {% include_relative _data/about.json %}
+    }
+</script>
+
+<div id="root"></div>
+<!-- Load our React component. -->
+<script src="/assets/main.js"></script>
+</body>
+</html>

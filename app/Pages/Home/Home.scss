@@ -1,0 +1,144 @@
+.HomePage {
+
+  .NavigationComponent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 0 100px 0;
+    background: linear-gradient(to bottom, rgba(40,44,52,1) 0%, rgba(40,44,52,1) 30%, rgba(40,44,52,0.05) 85%, rgba(40,44,52,0) 100%);
+    z-index: 1;
+  }
+
+  header.Home-header {
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-top: 1px;
+
+    .intro-text {
+      margin-top: 20vmin;
+      line-height: 1.4;
+      font-size: calc(5px + 3vmax);
+      font-weight: 400;
+
+      @media (max-width: 400px) {
+        font-size: calc(3vmax);
+      }
+
+      > div {
+        overflow: hidden;
+
+        > span {
+          display: block;
+        }
+      }
+
+      &:after {
+        content: '';
+        width: calc(20px + 10vw);
+        max-width: 200px;
+        height: 1vmin;
+        max-height: 5px;
+        margin-top: 30px;
+        background-color: white;
+        display: block;
+        transform-origin: 0 50%;
+      }
+    }
+  }
+
+  main.Home-main {
+
+    > section {
+      padding-top: 50px;
+      transition: transform 1s,opacity 1s;
+
+      .section-title {
+        margin-bottom: 0;
+        font-size: 10vw;
+        font-weight: 800;
+        transition: transform 1s;
+        margin-top: 0;
+      }
+
+      .section-content {
+        padding: 3vw 0;
+        font-size: calc(10px + 2vmin);
+      }
+
+
+      &[data-entered="false"] {
+        opacity: 0.00001;
+        transform: translateY(10%) scale(0.9);
+      }
+    }
+  }
+
+  #bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.page-appear {
+
+    .NavigationComponent nav.main {
+      transform: translateY(100px);
+      opacity: 0.000001;
+    }
+
+    .intro-text > div > span {
+      transform: translateY(200%);
+    }
+
+    .intro-text:after {
+      transform: scaleX(0);
+    }
+  }
+
+  &.page-enter-done {
+    //.NavigationComponent nav.main {
+    //  transform: translateY(0px);
+    //  opacity: 1;
+    //  transition: transform 0.2s, opacity 0.2s;
+    //  transition-delay: 1s;
+    //}
+
+    .intro-text {
+
+      > div {
+
+        > span {
+          transition: transform 0.8s;
+          transform: translateY(0%);
+        }
+
+        &:nth-child(1) > span {
+          transition-delay: 0.2s;
+        }
+
+        &:nth-child(2) > span {
+          transition-delay: 0.4s;
+        }
+
+        &:nth-child(3) > span {
+          transition-delay: 0.6s;
+        }
+      }
+
+      &:after {
+        transition: transform 0.6s;
+        transition-delay: 1.3s;
+        transition-timing-function: cubic-bezier(1,.02,.37,1);
+        transform: scaleX(1);
+      }
+
+    }
+  }
+
+}

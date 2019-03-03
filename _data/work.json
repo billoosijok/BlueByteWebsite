@@ -1,0 +1,6 @@
+[
+    { "id": "example-project", "title": "Example Projects", "image": "https://placehold.it/600x310" },
+    { "id": "example-project-2", "title": "Example Projects", "image": "https://placehold.it/500x550" },
+    { "id": "example-project-3", "title": "Example Projects", "image": "https://placehold.it/500x550" },
+    { "id": "example-project-4", "title": "Example Projects", "image": "https://placehold.it/500x550" }
+]
